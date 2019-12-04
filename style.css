@@ -1,5 +1,5 @@
 body {
-    font-family: 'Merriweather Sans', sans-serif;
+    font-family: 'Libre Baskerville', serif;
     text-align: center;
     width: 100%;
     margin: 0 auto;
@@ -7,12 +7,34 @@ body {
 
 .container {
   display: grid;
-  height: 100vh;
+  height: 100%;
   max-width: 100%;
   margin: 0 auto;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
 }
+
+.slicknav_menu {
+    display: none;
+}
+
+@media only screen and (min-width: 479px) {
+ 
+    
+    @media screen and (max-width: 960px) {
+    
+    .slicknav_menu {
+    display: block;
+  }
+    .nav {
+        display: none;
+    }
+    .container {
+        display: inline;
+    }
+}
+  
+
 
 .header {
   grid-row: 1/1;
@@ -21,6 +43,12 @@ body {
     color: #4B9CD3;
 }
 
+    .header2 {
+        grid-row: 1/1;
+        grid-column: 5/5;
+     background: #13294B;
+    color: #4B9CD3;   
+    }
 
 .aside {
     grid-column: 1/1;
@@ -38,6 +66,7 @@ img {
   grid-column: 2/5;
     grid-row: 2/5;
   background: white;
+    color: #13294B;
 }
 
 .sidebar {
@@ -52,6 +81,13 @@ grid-row: 2/5;
     background: #13294B;
     color: #4B9CD3;
 }
+
+    .f2 {
+     grid-row: 5/5;
+    grid-column: 1/6;
+    background: #13294B;
+    color: #4B9CD3;   
+    }
 
 .button {
     display: block;
@@ -69,8 +105,148 @@ grid-row: 2/5;
 .button:hover {
   background-color: #13294B;
     color: white;
+    transform: rotateX(90);
+    transform: scaleY(1.5);
+    transform: scaleX(1.5);
+    transition-duration: .5s;
 }
 
 .button:hover li {
     cursor: pointer;
+}
+    a:link {
+  color: #4B9CD3;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #4B9CD3;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: white;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:active {
+  color: yellow;
+  background-color: transparent;
+  text-decoration: underline;
+}
+    
+    .tutorial {
+        grid-row: 2/5;
+        grid-column: 1/5;
+        color: #4B9CD3;
+    }
+    
+    .tutorial2 {
+        grid-column: 1/5;
+        grid-row: 1/5;
+        color:#4B9CD3;
+    }
+    
+    .tutorial3 {
+        grid-column: 1/5;
+        grid-row: 1/5;
+        color: #13294B;
+    }
+
+form header {
+  margin: 0 0 20px 0; 
+}
+form header div {
+  font-size: 90%;
+  color: #999;
+}
+form header h2 {
+  margin: 0 0 5px 0;
+}
+form > div {
+  clear: both;
+  overflow: hidden;
+  padding: 1px;
+  margin: 0 0 10px 0;
+}
+form > div > fieldset > div > div {
+  margin: 0 0 5px 0;
+}
+form > div > label,
+legend {
+	width: 25%;
+  float: left;
+  padding-right: 10px;
+}
+form > div > div,
+form > div > fieldset > div {
+  width: 75%;
+  float: right;
+}
+form > div > fieldset label {
+	font-size: 90%;
+}
+fieldset {
+	border: 0;
+  padding: 0;
+}
+
+input[type=text],
+input[type=email],
+input[type=url],
+input[type=password],
+textarea {
+	width: 100%;
+  border-top: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+input[type=text],
+input[type=email],
+input[type=url],
+input[type=password] {
+  width: 50%;
+}
+input[type=text]:focus,
+input[type=email]:focus,
+input[type=url]:focus,
+input[type=password]:focus,
+textarea:focus {
+  outline: 0;
+  border-color: #4697e4;
+}
+
+@media (max-width: 600px) {
+  form > div {
+    margin: 0 0 15px 0; 
+  }
+  form > div > label,
+  legend {
+	  width: 100%;
+    float: none;
+    margin: 0 0 5px 0;
+  }
+  form > div > div,
+  form > div > fieldset > div {
+    width: 100%;
+    float: none;
+  }
+  input[type=text],
+  input[type=email],
+  input[type=url],
+  input[type=password],
+  textarea,
+  select {
+    width: 100%; 
+  }
+}
+@media (min-width: 1200px) {
+  form > div > label,
+	legend {
+  	text-align: right;
+  }
 }
